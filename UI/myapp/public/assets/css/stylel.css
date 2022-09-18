@@ -8344,6 +8344,21 @@ h1, h2, h3, h4, h5,
         color: #fff; }
 
 
+       /*
+       in body tag
+        style={{ 'background-image': 'url(assets/img/lock.png)', 
+				left: 0,
+				right: 0,
+				position: "absolute",
+				backgroundPosition: "center",
+				backgroundSize: "cover",
+				backgroundRepeat: "no-repeat",
+				width: "100vw",
+				height: "fit",
+			  }} 
+        */
+
+
 
 
 

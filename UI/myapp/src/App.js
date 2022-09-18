@@ -7,6 +7,8 @@ import ResetPassword from './Pages/ResetPassword/ResetPassword'
 import UpdateProfile from './Pages/UpdateProfile/UpdateProfile'
 import Dashboard4 from './Pages/Dashboard/Dashboard4';
 import Share from './Pages/Share/Share';
+import ViewDocuments from './Pages/ViewDocuments/ViewDocuments';
+/*import Admin from './Pages/Admin/Admin';*/
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard4 />} />
           <Route path="/updateprofile" element={<UpdateProfile />} />
           <Route path="/share" element={<Share />} />
+          {/*<Route path="/admin" element={<Admin />} />*/}
+          <Route path="/view" element={<ViewDocuments />} />
           
 
 

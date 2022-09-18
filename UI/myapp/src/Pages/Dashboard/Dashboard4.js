@@ -4,7 +4,6 @@ const Dashboard4 = () => {
   return (
     
     <div
-
     
     style={{
       backgroundImage: "url(assets/img/lock.png)",
@@ -41,9 +40,13 @@ const Dashboard4 = () => {
 
             <div class="btns">
               <a href="/" class="btn-menu animated fadeInUp scrollto"><i class="bi bi-file-earmark-plus" ></i> Create Folder</a>
-              <a href="/" class="btn-book animated fadeInUp scrollto"><i class="bi bi-folder2-open"></i>  Show Folder</a>
+             
+              <a href="/view" class="btn-book animated fadeInUp scrollto"><i class="bi bi-folder2-open"></i>  Show Folder</a>
+              
               <a href="/share" class="btn-book animated fadeInUp scrollto"><i class="bi bi-share-fill"></i>  Share</a>
+              
               <a href="/updateprofile" class="btn-book animated fadeInUp scrollto"><i class="bi bi-person"></i>  Update Profile</a>
+             
               <a href="/" class="btn-book animated fadeInUp scrollto"><i class="bi bi-box-arrow-left"></i>  Logout</a>
 
                 {/*<a href="#menu" class="btn-menu animated fadeInUp scrollto">SignUp</a>

@@ -7,10 +7,11 @@ const ResetPassword= () => {
 
 	const [userName, setUserName] = useState('')
 	const [password, setPassword] = useState('')
+	const [confirmpass, setconfirmpass] = useState('')
 
 	const postData = async () => {
 		try{
-			const res = await Axios.post(`http://localhost:8081/login`,{userName,password})
+			const res = await Axios.post(`http://localhost:8081/login`,{userName,password, confirmpass})
 			if(res.data !== ""){window.location.href = "/dashboard"}
 			else{window.location.href = "/"}
 			}
@@ -26,15 +27,6 @@ const ResetPassword= () => {
 	//Rendering
 	return (
 		<div>
-			<head>
-				<title>Student Login</title>
-				<meta charset="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-				<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
-				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-				<link rel="stylesheet" href="assets/css/stylel.css" />
-			</head>
 			<body>
 				<section class="ftco-section">
 					<div class="container">
@@ -91,11 +83,7 @@ const ResetPassword= () => {
 													</div>
 												</div>	
 												*/}
-												
-
 											</form>
-											
-
 											<p class="text-right"><a href="/">Home</a>
 											<i class="bi bi-house-fill"></i>
 											</p>

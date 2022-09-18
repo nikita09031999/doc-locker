@@ -1,17 +1,15 @@
 import React from 'react'
 
 export default function UpdateProfile() {
+
+
+	const [userProfile, setUserProfile] = useState('')
+	const [userName, setUserName] = useState('')
+	const [password, setPassword] = useState('')
+
+
 	return (
         <div>
-			<head>
-				<title>Student Login</title>
-				<meta charset="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-				<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
-				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-				<link rel="stylesheet" href="assets/css/stylel.css" />
-			</head>
 			<body>
 				<section class="ftco-section">
 					<div class="container-fluid">
@@ -31,6 +29,33 @@ export default function UpdateProfile() {
 												</p>
 											</div>
 										</div>
+
+{/*
+										<section id="update" class="d-flex align-items-center">
+										<div class="d-flex align-items-center">
+      <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="btns">
+              <a href="/signup" class="btn-menu animated fadeInUp scrollto">Change Profile Photo</a>
+			  <br />
+			  <br />
+              <a href="/signup" class="btn-book animated fadeInUp scrollto">Change Username</a>
+			  <br />
+			  <br />
+              <a href="/password" class="btn-book animated fadeInUp scrollto">Reset Password</a>
+           
+            </div>
+          </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200"></div>
+        </div>
+      </div>
+    </div>
+	</section>
+	*/}
+
+										
 										<div class="form-group mb-3">
 										<label class="label" style={{ 'padding-top': '18px', 'height': '55px' }}></label>
                                             <button type="submit"
@@ -48,13 +73,15 @@ export default function UpdateProfile() {
                                             <button type="submit"
                                         	    class="form-control btn btn-primary rounded submit px-3">Reset Password</button>
                                     	</div>
+										
 										<div class="form-group mb-3">
 											<label class="label" style={{ 'padding-top': '18px', 'height': '55px' }}></label>
 											<button type="submit"
 												class="form-control btn btn-primary rounded submit px-3">Update</button>
 										</div>
+	
 
-										<p class="text-right"><u><a href="/dashboard4">Home<i class="bi bi-house-fill"></i></a></u></p>
+										<p class="text-right"><u><a href="/dashboard">Back<i class="bi bi-arrow-left-square-fill"></i></a></u></p>
 									</div>
 									
 								</div>
@@ -64,6 +91,5 @@ export default function UpdateProfile() {
 				</section>
 			</body>
 		</div>
-		
 	)
 }

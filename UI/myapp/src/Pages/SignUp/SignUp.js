@@ -1,21 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
-
 export default function SignUp() {
-
 	return (
         <div>
-			<head>
-				<title>Student Login</title>
-				<meta charset="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-				<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
-				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-				<link rel="stylesheet" href="assets/css/stylel.css" />
-			</head>
 			<body>
 				<section class="ftco-section">
 					<div class="container-fluid">
@@ -51,16 +39,21 @@ export default function SignUp() {
                                         <div class="form-group mb-3">
 											<i class="fa fa-envelope-square"></i>
 												<label class="label" for="password">Email Id</label>
-												<input type="email" class="form-control" placeholder="Email Id" required />
+												<input type="email" class="form-control" placeholder="Email Id" pattern="@gmail.com" required />
 										</div>
 	
 											<div class="form-group mb-3">
 											<i class="fa fa-phone"></i>
 												<label class="label" for="password">Mobile No</label>
-												<input type="number" class="form-control" placeholder="Mobile No" required />
+												<input type="number" class="form-control"  maxlength="10" placeholder="Mobile No" pattern="+[0-9]{2}-[0-9]{10}" required />
+												{/*
+												<form onSubmit="return myfunc()">
+												<input type="text" class="form-control" id="mobileno" value=""></input>
+												<span id="messages"></span>
+												<input type="submit" value="submit"></input>
+												</form>
+												*/}
 											</div>
-											
-											
 										</form>
 									</div>
 									<div class="login-wrap p-4 p-md-5">
@@ -70,7 +63,6 @@ export default function SignUp() {
 													<br />
 												</h3>
 											</div>
-
 
 											<div class="w-80">
 												<p class="social-media d-flex justify-content-end">
@@ -82,8 +74,6 @@ export default function SignUp() {
 												<label class="label" for="password">User Name</label>
 												<input type="text" class="form-control" placeholder="User Name" required />
 										</div>
-										
-                                        
 										
 										<div class="form-group mb-3">
 										<i class="fa fa-unlock-alt"></i>
@@ -104,8 +94,6 @@ export default function SignUp() {
 												class="form-control btn btn-primary rounded submit px-3">Sign Up</button>
 										</div>
 
-										
-
 										<div className="row">
 										<div className="col">
 										<Link to ={'/signin'}>Already an user? Sign In</Link>
@@ -114,23 +102,15 @@ export default function SignUp() {
 										<div className="col">
 										{/*<p class="text-center"><a href="/signin">Already an user? Sign In</a></p>*/}
 										<p class="text-center"><a href="/">Home</a><i class="bi bi-house-fill"></i></p>
-
 										</div>
 										</div>
-										
-										
 									</div>
 								</div>
 							</div>
 						</div>
-						
 					</div>
 				</section>
-				
 			</body>
-			
-			
 		</div>
-		
 	)
 }

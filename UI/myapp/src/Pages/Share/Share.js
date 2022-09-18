@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom'
 
 export default function Share() {
 /*
-	const [userName, setUserName] = useState('')
-	const [password, setPassword] = useState('')
+	const [link, setlink] = useState('')
+	const [QRcode, setQRcode] = useState('')
 
 	const postData = async () => {
 		try{
-			const res = await Axios.post(`http://localhost:8081/login`,{userName,password})
+			const res = await Axios.post(`http://localhost:8081/login`,{link,QRcode})
 			if(res.data !== ""){window.location.href = "/dashboard"}
 			else{window.location.href = "/"}
 			}
@@ -27,28 +27,8 @@ export default function Share() {
 */
 	//Rendering
 
-	function handlerex(event)
-    {
-        console.log(event.target.name)
-        
-        if(event.target.name==="b1")
-        console.log("HI THERE BUTTON OK1 CLICKED")
-        if(event.target.name==="b2")
-        console.log("HI THERE BUTTON OK2 CLICKED")
-    }
-
-
 	return (
 		<div>
-			<head>
-				<title>Student Login</title>
-				<meta charset="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-				<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
-				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-				<link rel="stylesheet" href="assets/css/stylel.css" />
-			</head>
 			<body>
 				<section class="ftco-section">
 					<div class="container">
@@ -83,8 +63,6 @@ export default function Share() {
 													    className="form-control btn btn-primary rounded submit px-3" /*onClick={handlerex}*/>QR Code</button>
 												</div>
 
-												
-            
 												<br />
 												{/*
 												<div className="row">
@@ -96,12 +74,16 @@ export default function Share() {
 														<Link to ={'/dashboard4'}>Home<i class="bi bi-house-fill"></i></Link>
 													</div>
 												</div>
+
+												<p class="text-right"><u><a href="/dashboard">Back<i class="bi bi-arrow-left-square-fill"></i></a></u></p>
+
+												<p class="text-left"><u><a href="/dashboard">Logout<i class="bi bi-box-arrow-left"></i></a></u></p>
 */}
 
 												<div class="form-group d-md-flex">
 													<div class="w-50 text-left">
 														<div class="w-20 text-md-left">
-															<a href="/dashboard4"><i class="bi bi-arrow-left-square-fill"></i>Back</a>
+															<a href="/dashboard"><i class="bi bi-arrow-left-square-fill"></i>Back</a>
 														</div>
 														</div>
 														<div class="w-50 text-md-right">
@@ -109,13 +91,6 @@ export default function Share() {
 														</div>
 												</div>		
 
-
-
-
-
-
-												
-												
 											</form>
 										</div>
 										{/*<Link to='/signup'>
