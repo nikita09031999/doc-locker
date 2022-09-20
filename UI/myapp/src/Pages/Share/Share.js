@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 //import Axios from 'axios'
 
 export default function Share() {
+	let user = JSON.parse(sessionStorage.getItem('userlogin'))
 /*
 	const [link, setlink] = useState('')
 	const [QRcode, setQRcode] = useState('')
@@ -26,6 +27,9 @@ export default function Share() {
 	 }
 */
 	//Rendering
+
+	if(user!==null)
+  {
 
 	return (
 		<div>
@@ -87,7 +91,7 @@ export default function Share() {
 														</div>
 														</div>
 														<div class="w-50 text-md-right">
-																<a href="/"><i class="bi bi-box-arrow-left"></i>Logout</a>
+																<a href="/logout"><i class="bi bi-box-arrow-left"></i>Logout</a>
 														</div>
 												</div>		
 
@@ -105,5 +109,6 @@ export default function Share() {
 			</body>
 		</div>
 	)
+}
 }
 

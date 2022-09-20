@@ -8,12 +8,12 @@ import UpdateProfile from './Pages/UpdateProfile/UpdateProfile'
 import Dashboard4 from './Pages/Dashboard/Dashboard4';
 import Share from './Pages/Share/Share';
 import ViewDocuments from './Pages/ViewDocuments/ViewDocuments';
+import Logout from './Pages/Logout/Logout';
 /*import Admin from './Pages/Admin/Admin';*/
 
 function App() {
   return (
    
-    
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -25,6 +25,8 @@ function App() {
           <Route path="/share" element={<Share />} />
           {/*<Route path="/admin" element={<Admin />} />*/}
           <Route path="/view" element={<ViewDocuments />} />
+          <Route path="/logout" element={<Logout />} />
+
           
 
 

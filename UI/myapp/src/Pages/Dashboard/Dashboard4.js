@@ -1,6 +1,21 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { Navigate } from 'react-router-dom'
 
 const Dashboard4 = () => {
+  let user = JSON.parse(sessionStorage.getItem('userlogin'))
+
+  useEffect(()=>{
+    if(user===null)
+    {
+      Navigate("/");
+    }
+   
+    
+},[])
+
+  if(user!==null)
+  {
   return (
     
     <div
@@ -47,7 +62,7 @@ const Dashboard4 = () => {
               
               <a href="/updateprofile" class="btn-book animated fadeInUp scrollto"><i class="bi bi-person"></i>  Update Profile</a>
              
-              <a href="/" class="btn-book animated fadeInUp scrollto"><i class="bi bi-box-arrow-left"></i>  Logout</a>
+              <a href="/logout" class="btn-book animated fadeInUp scrollto"><i class="bi bi-box-arrow-left"></i>  Logout</a>
 
                 {/*<a href="#menu" class="btn-menu animated fadeInUp scrollto">SignUp</a>
                 <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">SignIn</a>*/}
@@ -65,4 +80,8 @@ const Dashboard4 = () => {
     </div>
   )
 }
+
+
+}
+
 export default Dashboard4;

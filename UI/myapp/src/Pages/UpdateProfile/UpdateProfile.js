@@ -1,12 +1,16 @@
 import React from 'react'
-
+import { useState } from "react"
 export default function UpdateProfile() {
+
+	let user = JSON.parse(sessionStorage.getItem('userlogin'))
 
 
 	const [userProfile, setUserProfile] = useState('')
 	const [userName, setUserName] = useState('')
 	const [password, setPassword] = useState('')
 
+	if(user!==null)
+  {
 
 	return (
         <div>
@@ -92,4 +96,5 @@ export default function UpdateProfile() {
 			</body>
 		</div>
 	)
+}
 }
