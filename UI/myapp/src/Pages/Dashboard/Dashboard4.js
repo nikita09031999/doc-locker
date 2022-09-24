@@ -1,27 +1,34 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
+import { axios } from 'axios'
+import Navbar from '../Navbar/Navbar'
+
 
 const Dashboard4 = () => {
-  let user = JSON.parse(sessionStorage.getItem('userlogin'))
 
-  useEffect(()=>{
-    if(user===null)
-    {
-      Navigate("/");
-    }
-   
-    
-},[])
+ 
+
+  let user = JSON.parse(sessionStorage.getItem('userlogin'));
+  console.log(user);
+  let Id=user.userId;
+
+  function createFolder ()
+  {
+    axios.post("http://localhost:8080/usersession/add/"+Id)
+    .then(Response=>{console.log(Response)})
+    .catch(error =>{console.log(error)});
+  }
 
   if(user!==null)
   {
+
   return (
     
     <div
     
     style={{
-      backgroundImage: "url(assets/img/lock.png)",
+      backgroundImage: "url(assets/img/img2.png)",
       left: 0,
       right: 0,
       position: "absolute",
@@ -31,10 +38,14 @@ const Dashboard4 = () => {
       width: "100vw",
       height: "100vh",
     }}
+
+    
     >
 
-    <section id="hero" class="d-flex align-items-top">
-   
+    <Navbar></Navbar>
+
+    {/*<section id="hero" class="d-flex align-items-top">*/}
+    <section id="hero" class="hero">
     <div class="d-flex align-items-top">
       <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
         <div class="row">
@@ -42,8 +53,9 @@ const Dashboard4 = () => {
           <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
             <div class="d-flex flex-column">
                 <div class="profile">
+                <br/><br/><br/><br/>
                     <img src="assets/img/userprofile.png" width={200} alt=""  class="img-fluid rounded-circle"/>
-                        <h1 class="text-light"><a href="index.html">Hello User</a></h1>
+                        <h1 class="text-light"><a href="index.html">Hello {user.firstName}</a></h1>
             </div>
             <br />
             <br />
@@ -54,11 +66,11 @@ const Dashboard4 = () => {
             
 
             <div class="btns">
-              <a href="/" class="btn-menu animated fadeInUp scrollto"><i class="bi bi-file-earmark-plus" ></i> Create Folder</a>
+              <a href="http://localhost:8080/createfolder" class="btn-menu animated fadeInUp scrollto"><i class="bi bi-file-earmark-plus"  onClick={createFolder}></i> Show Folder</a>
              
-              <a href="/view" class="btn-book animated fadeInUp scrollto"><i class="bi bi-folder2-open"></i>  Show Folder</a>
+              {/*<a href="/view" class="btn-book animated fadeInUp scrollto"><i class="bi bi-folder2-open"></i>  Show Folder</a>
               
-              <a href="/share" class="btn-book animated fadeInUp scrollto"><i class="bi bi-share-fill"></i>  Share</a>
+              <a href="/share" class="btn-book animated fadeInUp scrollto"><i class="bi bi-share-fill"></i>  Share</a>*/}
               
               <a href="/updateprofile" class="btn-book animated fadeInUp scrollto"><i class="bi bi-person"></i>  Update Profile</a>
              
@@ -75,8 +87,6 @@ const Dashboard4 = () => {
     </div>
     </div>
     </section>
-    
-    
     </div>
   )
 }

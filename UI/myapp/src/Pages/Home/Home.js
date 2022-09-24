@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../Navbar/Navbar'
 
 const Home = () => {
   return (
@@ -18,7 +19,8 @@ const Home = () => {
     
 
     {/*---------------HEADER-----------------*/}
-
+<Navbar></Navbar>
+{/*
     <header id="header" class="d-flex align-items-center fixed-top">
     <div class="container d-flex align-items-center"><img src="assets/img/Logo.png" alt="" width="50" height="200"
         class="img-fluid"/>
@@ -44,18 +46,20 @@ const Home = () => {
 
     </div>
   </header>
+  */}
 
    {/*---------------TEMPLATE-----------------*/}
-   {/*<section id="hero" class="hero">*/}
-   <section id="hero" class="d-flex align-items-center">
+ <section id="hero" class="hero">
+    {/* <section id="hero" class="d-flex align-items-center">*/}
    
     <div class="d-flex align-items-center">
       <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-12">
-            <h1>Welcome to <span>DocLocker</span></h1>
+          <br /><br /><br /><br /><br /><br /><br /><br />
+            <h1>Welcome to <span>DocLocker !!</span></h1>
+            <br />
             <h2>Secure your documents!!</h2>
-
             <div class="btns">
               <a href="/signup" class="btn-menu animated fadeInUp scrollto">SignUp</a>
               <a href="/signin" class="btn-book animated fadeInUp scrollto">SignIn</a>
