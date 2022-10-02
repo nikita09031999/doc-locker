@@ -45,7 +45,7 @@
 
   - Go to terminal and run the project on 3000 port
     use below commands
-     - cd DoclockerApp
+     - cd myapp
      - npm start
 
      @Home page will be shown when run on port 3000.
