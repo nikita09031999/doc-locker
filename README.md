@@ -68,6 +68,9 @@
      -  go to "src/main/resources/application.properties" do the respective changes as per your database. 
        eg:- username password make connection to database .
      - run the project as java application
+     
+     - while uploading document fire below command in mysql
+     - alter table doc_info_tbl modify column content mediumblob
 
 ##### Web Application is ready to use on your machine.
    
