@@ -25,7 +25,7 @@
   - Make new Environment to run the project.
     ** Frontend will be manage in vscode Tool.
      - create new React project.
-       npx create-react-app DoclockerApp
+       npx create-react-app myapp
      - install node modules use below command
        npm install
      - copy the files from respective folder from clone folder to new environment project folders.
