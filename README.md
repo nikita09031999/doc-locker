@@ -25,7 +25,7 @@
   - Make new Environment to run the project.
     ** Frontend will be manage in vscode Tool.
      - create new React project.
-       npx create-react-app DoclockerApp
+       npx create-react-app myapp
      - install node modules use below command
        npm install
      - copy the files from respective folder from clone folder to new environment project folders.
@@ -45,7 +45,7 @@
 
   - Go to terminal and run the project on 3000 port
     use below commands
-     - cd DoclockerApp
+     - cd myapp
      - npm start
 
      @Home page will be shown when run on port 3000.
@@ -68,6 +68,9 @@
      -  go to "src/main/resources/application.properties" do the respective changes as per your database. 
        eg:- username password make connection to database .
      - run the project as java application
+     
+     - while uploading document fire below command in mysql
+     - alter table doc_info_tbl modify column content mediumblob
 
 ##### Web Application is ready to use on your machine.
    
